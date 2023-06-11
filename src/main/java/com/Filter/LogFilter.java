@@ -7,12 +7,15 @@ import java.io.IOException;
 
 @WebFilter("/*")
 public class LogFilter implements Filter {
+    //初始(未使用)
     public void init(FilterConfig config) throws ServletException {
     }
 
+    //销毁(未使用)
     public void destroy() {
     }
 
+    //过滤器
     @Override
     public void doFilter(ServletRequest reques1, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         //强转请求
@@ -27,11 +30,11 @@ public class LogFilter implements Filter {
             //不包含
             //获取user,判断是否包含用户
             Object um = request.getSession().getAttribute("um");
-            if(um!=null){
+            if (um != null) {
                 //放行
-                chain.doFilter(reques1,response);
-            }else {
-                request.getRequestDispatcher("/index.jsp").forward(request,response);
+                chain.doFilter(reques1, response);
+            } else {
+                request.getRequestDispatcher("/index.jsp").forward(request, response);
             }
         }
     }

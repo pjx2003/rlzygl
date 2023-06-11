@@ -9,7 +9,6 @@ public class pagination<T> {
     private int pageShowrow;//每页显示条数
     private int nowPageCount;//当前页码
 
-
     public int getPageCount() {
         return pageCount;
     }

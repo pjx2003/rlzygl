@@ -23,8 +23,7 @@ public class personmeDaoImpl implements PersonmeDao {
             //创建语句
             String sql = "select * from logon where username= ? and password= ? ;";
             //建立查询
-            person person = template.queryForObject(sql, new BeanPropertyRowMapper<>(person.class), username, password);
-            return person;
+            return template.queryForObject(sql, new BeanPropertyRowMapper<>(person.class), username, password);
         } catch (Exception e) {
             return null;
         }
@@ -35,8 +34,7 @@ public class personmeDaoImpl implements PersonmeDao {
     public int forgets(String username, String password) {
         //创建sql语句
         String sql = "update logon set password = ? where username = ? ;";
-        int update = template.update(sql, password, username);
-        return update;
+        return  template.update(sql, password, username);
     }
 
     //查询管理员实现方法
@@ -44,8 +42,7 @@ public class personmeDaoImpl implements PersonmeDao {
     public List<person> selectnetwork() {
         //sql语句
         String sql = "select * from logon ; ";
-        List<person> query = template.query(sql, new BeanPropertyRowMapper<>(person.class));
-        return query;
+        return template.query(sql, new BeanPropertyRowMapper<>(person.class));
     }
 
     //查询搜索接口实现方法
@@ -77,8 +74,7 @@ public class personmeDaoImpl implements PersonmeDao {
         //添加分页查询参数值
         params.add(nowPageCount);
         params.add(pageShowrow);
-        List<person> query = template.query(sb.toString(), new BeanPropertyRowMapper<person>(person.class), params.toArray());
-        return query;
+        return template.query(sb.toString(), new BeanPropertyRowMapper<person>(person.class), params.toArray());
 
     }
 
@@ -113,8 +109,7 @@ public class personmeDaoImpl implements PersonmeDao {
         //编写sql语句
         try {
             String sql = "insert into person (username,password,gender,age,department,phone ) values ( ?,?,?,?,?,? ) ; ";
-            int update = template.update(sql, person.getUsername(), person.getPassword(), person.getGender(), person.getAge(), person.getDepartment(), person.getPhone());
-            return update;
+            return template.update(sql, person.getUsername(), person.getPassword(), person.getGender(), person.getAge(), person.getDepartment(), person.getPhone());
         } catch (Exception e) {
             return 0;
         }
@@ -125,8 +120,7 @@ public class personmeDaoImpl implements PersonmeDao {
     public List<person> modify1(String id) {
         //编写语句
         String sql = "select * from person where id = ? ; ";
-        List<person> query = template.query(sql, new BeanPropertyRowMapper<person>(person.class), id);
-        return query;
+        return template.query(sql, new BeanPropertyRowMapper<person>(person.class), id);
     }
 
     //修改员工2方法实现
@@ -134,8 +128,7 @@ public class personmeDaoImpl implements PersonmeDao {
     public int modify2(person p) {
         //编写sql语句
         String sql = "update person set username = ? ,password = ? ,gender = ? ,age = ? ,phone = ?  where id = ? ;";
-        int update = template.update(sql, p.getUsername(), p.getPassword(), p.getGender(), p.getAge(), p.getPhone(), p.getId());
-        return update;
+        return template.update(sql, p.getUsername(), p.getPassword(), p.getGender(), p.getAge(), p.getPhone(), p.getId());
     }
 
     //删除员工方法实现
@@ -151,7 +144,6 @@ public class personmeDaoImpl implements PersonmeDao {
     public List<training> selecttraining() {
         //编写sql
         String sql = "select * from training ;";
-        List<training> query = template.query(sql, new BeanPropertyRowMapper<>(training.class));
-        return query;
+        return template.query(sql, new BeanPropertyRowMapper<>(training.class));
     }
 }
