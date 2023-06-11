@@ -31,7 +31,6 @@ public class LogFilter implements Filter {
                 //放行
                 chain.doFilter(reques1,response);
             }else {
-                request.setAttribute("usernull","请登录");
                 request.getRequestDispatcher("/index.jsp").forward(request,response);
             }
         }

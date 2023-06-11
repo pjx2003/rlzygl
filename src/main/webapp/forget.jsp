@@ -4,17 +4,7 @@
     <title>忘记密码</title>
     <link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <style>
-        #img {
-            background-image: url("bootstrap/image/beijing.gif");
-        }
-
-        .container {
-            background-color: steelblue;
-            border-radius: 15px;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap/css/main.css">
 </head>
 <body id="img">
 <div class="container" style="width: 420px">

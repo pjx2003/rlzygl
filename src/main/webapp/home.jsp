@@ -5,7 +5,6 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="bootstrap/js/jquery-3.6.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-
 </head>
 <body>
 
@@ -49,16 +48,5 @@
     </div>
 </div>
 
-<footer class="container-fluid">
-    <div class="row">
-        <img src="bootstrap/image/footer_service.png" class="img-responsive">
-    </div>
-
-    <div class="row">
-        <span style="font-size: 15px;color: deepskyblue">人力资源管理,人事管理的升级，是指在经济学与人本思想指导下，通过招聘、甄选、培训、
-            报酬等管理形式对组织内外相关人力资源进行有效运用，满足组织当前及未来发展的需要，保
-            证组织目标实现与成员发展的最大化的一系列活动的总称。</span>
-    </div>
-</footer>
 </body>
 </html>

@@ -1,0 +1,10 @@
+#img {
+    background-image: url("../../bootstrap/image/beijing.gif");
+}
+.container{
+    margin-top: 20px;
+    width: 400px;
+    background-color: steelblue;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}

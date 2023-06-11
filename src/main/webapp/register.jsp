@@ -5,20 +5,9 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="bootstrap/js/jquery-3.6.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <style>
-        #bg{
-            background-image: url("bootstrap/image/beijing.gif");
-        }
-        .container{
-            margin-top: 20px;
-            width: 400px;
-            background-color: steelblue;
-            border-radius: 10px;
-            background-repeat: no-repeat;
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap/css/main.css">
 </head>
-<body id="bg">
+<body id="img">
 <div class="container">
     <h3 style="text-align: center;">员工注册</h3>
     <form action="${pageContext.request.contextPath}/registerservlet" method="post">

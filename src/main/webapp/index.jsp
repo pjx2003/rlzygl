@@ -1,22 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>logon</title>
+    <meta charset="UTF-8">   <title>logon</title>
    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="bootstrap/js/jquery-3.6.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <style>
-        #img {
-            background-image: url("bootstrap/image/beijing.gif");
-        }
+    <link rel="stylesheet" href="bootstrap/css/main.css">
 
-        .container {
-            background-color: steelblue;
-            border-radius: 15px;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 <body id="img">
 <div class="container" style="width: 400px;">
